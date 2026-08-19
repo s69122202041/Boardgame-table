@@ -1,4 +1,4 @@
-name: Deploy Nuxt to Github Pages
+name: Deploy Nuxt to GitHub Pages
 
 on:
   workflow_dispatch:
@@ -15,22 +15,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Download source code
+      - name: Checkout source code
         uses: actions/checkout@v4
 
-      - name: Install Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22"
           cache: npm
 
-      - name: Install packages
+      - name: Install dependencies
         run: npm ci
 
-      - name: Build static website
-        run: npx nuxt build --preset github_pages
+      - name: Generate static website
+        run: npm run generate
         env:
-          NUXT_APP_BASE_URL: /
+          NUXT_APP_BASE_URL: /Boardgame-table/
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3

@@ -1,6 +1,23 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  css: ['~/assets/css/main.css'],
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true }
+  devtools: {
+    enabled: true
+  },
+
+  css: [
+    '~/assets/css/main.css'
+  ],
+
+  app: {
+    baseURL: '/Boardgame-table/',
+    buildAssetsDir: '/_nuxt/',
+    cdnURL: ''
+  },
+
+  nitro: {
+    preset: 'github-pages'
+  },
+
+  ssr: false,
+
+  compatibilityDate: '2026-08-20'
 })

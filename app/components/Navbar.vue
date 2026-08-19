@@ -65,7 +65,7 @@ const closeMenu = () => {
         </NuxtLink>
 
         <a
-          href="/#discrete"
+          href="/Boardgame-table/#discrete"
           class="nav-link"
         >
           Discrete Math
@@ -150,7 +150,7 @@ const closeMenu = () => {
         </NuxtLink>
 
         <a
-          href="/#discrete"
+          href="/Boardgame-table/#discrete"
           class="mobile-link"
           @click="closeMenu"
         >
